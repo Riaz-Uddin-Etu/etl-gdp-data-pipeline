@@ -4,6 +4,7 @@ from transform import transform
 from load import load_to_csv, load_to_db
 import pandas as pd
 import sqlite3
+import os
 
 csv_file_path = 'data/processed/Countries_by_GDP.csv'
 db_name = 'World_Economies.db'
@@ -12,7 +13,11 @@ table_name = 'Countries_by_GDP'
 log_file = 'logs/etl_project_log.txt' 
 URL = 'https://web.archive.org/web/20230902185326/https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29'
 
-def log_progress(message):
+os.makedirs("logs", exist_ok=True)
+os.makedirs("data/raw", exist_ok=True)
+os.makedirs("data/processed", exist_ok=True)
+
+def log_progress(message):    
     time_format = '%Y-%h-%d-%H:%M:%S'
     now  = datetime.now()
     timestamp = now.strftime(time_format)
