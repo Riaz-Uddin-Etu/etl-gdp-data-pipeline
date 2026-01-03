@@ -7,13 +7,9 @@ The pipeline extracts GDP data from a public Wikipedia source (archived via Wayb
 
 This project was built to demonstrate core data engineering fundamentals using real-world data.
 
----
-
 ## Data Source
 - International Monetary Fund (IMF) GDP data  
 - Source: Wikipedia (archived snapshot)
-
----
 
 ## Tech Stack
 - Python  
@@ -21,13 +17,9 @@ This project was built to demonstrate core data engineering fundamentals using r
 - Pandas (data transformation)
 - SQLite (data storage)
 
----
-
 ## Project Architecture
 
 Each ETL stage is implemented as a separate module to ensure clarity, testability, and extensibility.
-
----
 
 ## How to Run
 ```bash
